@@ -12,7 +12,7 @@ while in your local directory `../senti_one`
 
 To use the app, go to:
 ```
-localhost:5000
+localhost:80
 ```
 Submit some data and check if it is visible in database (instructions bellow)
 
