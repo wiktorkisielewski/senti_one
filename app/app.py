@@ -16,9 +16,8 @@ def post_it():
 	    data = request.form['n']
 	    cur.execute("INSERT INTO psqldata (RESPONSE, TIME_STAMP) VALUES ('{}', '{}');".format(str(data), str(datetime.datetime.now())))
 	    con.commit()
-	    print('data saved')
 	    con.close()
 	    return redirect(url_for('main'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run()
