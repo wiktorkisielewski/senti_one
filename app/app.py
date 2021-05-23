@@ -19,5 +19,10 @@ def post_it():
 	    con.close()
 	    return redirect(url_for('main'))
 
+@app.route('/get_request')
+def get_req():
+	if request.method == 'GET':
+		return render_template('index.html')
+
 if __name__ == '__main__':
     app.run()

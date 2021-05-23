@@ -1,13 +1,14 @@
 <html>
    <body>
       <form action = "http://localhost:80/post_to_psql_db" method ="post">
-         <p>Type something:</p>
-         <p>
-         	<input type="text" name="n"/>
-         </p>
-         <p>
-         	<input type="submit" value="SAVE TO DATABASE"/>
-         </p>
-      </form>   
+         Type something:
+      	<input type="text" name="n"/>
+      	<input type="submit" value="SAVE TO DATABASE"/>      
+      </form>
+      <form action = "http://localhost:80/get_request" method ="get">
+         <br><br><br>
+         Test get request: 
+         <input type="submit" value="SEND GET REQUEST"/>
+      </form>  
    </body>
 </html>
