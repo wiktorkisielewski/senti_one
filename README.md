@@ -1,5 +1,10 @@
 # senti_one
 
+## PREREQUISITS
+- docker version `20.10.6`
+
+- docker-compose version `3.9`
+
 ## BUILD & RUN
 
 Please clone this repository and execute:
@@ -66,6 +71,9 @@ senti1_app | 127.0.0.1 - - [24/May/2021 08:11:45] "POST /post_to_psql_db HTTP/1.
 ```
 `POST` request has default input: `n=test_response`, it will be saved in database (steps to check it above ⬆️)
 
-
-
+You can also check curls manually, by:
+```
+curl -X GET "http://localhost:8080/post_to_psql_db" && curl -X POST -F "n=test_response" "http://localhost:8080/post_to_psql_db"
+```
+<br><br>
 If You have any questions or problems with runing this build, please dont hasitate to ask at any moment!
