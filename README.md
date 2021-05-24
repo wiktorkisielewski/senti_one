@@ -53,6 +53,11 @@ The `curls.sh` will send `GET` and `POST` requests.
 
 Responses and requests syntax should appear bellow the executed command.
 
+Docker will also output logs:
+```
+senti1_app | 127.0.0.1 - - [24/May/2021 08:11:45] "GET /post_to_psql_db HTTP/1.1" 405 -
+senti1_app | 127.0.0.1 - - [24/May/2021 08:11:45] "POST /post_to_psql_db HTTP/1.1" 302 -
+```
 `POST` request has default input: `n=test_response`, it will be saved in database (steps to check it above ⬆️)
 
 
