@@ -16,9 +16,9 @@ while in your local directory `../senti_one`
 
 To use the app, go to:
 ```
-localhost:80
+localhost:8080
 ```
-Submit some data and check if it is visible in database (instructions bellow)
+Use the buttons and text input to insert something into postgresql database (via `POST`) or to test what happens if `GET` request is sent.
 
 ## DATABASE
 To enter the database please enter the container:
@@ -39,4 +39,4 @@ To show data from table type:
 ```
 SELECT * FROM PSQLDATA;
 ```
-Try this before and after submiting some data at `localhost:5000` 
+Try this before and after submiting some data at `localhost:8080` 
