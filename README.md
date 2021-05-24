@@ -12,9 +12,11 @@ while in your local directory `../senti_one`
 ( In case you don't have `docker compose` plese install it:
 ```https://docs.docker.com/compose/install/``` )
 
+In `docker-compose.yml` version is set as `3.9`, please use this version or change this number to your local version.
+
 ## APP
 
-To use the app, go to:
+To use the app, open your internet browser and go to:
 ```
 localhost:8080
 ```
@@ -25,11 +27,13 @@ To enter the database please enter the container:
 ```
 docker exec -it senti1_db bash
 ```
+(do this in another terminal session, while containers are running)
+
 and then:
 ```
 psql -h localhost -p 5432 -d database -U admin --password
 ```
-password `admin1`
+password: `admin1`
 
 To show the tables type:
 ```
@@ -39,7 +43,9 @@ To show data from table type:
 ```
 SELECT * FROM PSQLDATA;
 ```
-Try this before and after submiting some data at `localhost:8080` 
+Try this before and after submiting some data at `localhost:8080`
+
+Press `ctrl + D` to exit database, again to exit the container.
 ## CURL REQUESTS
 To test curl requesests (`GET|POST`) please enter the senti1_app container by:
 ```
