@@ -8,7 +8,7 @@ app = Flask(__name__)
 def main():
 	return render_template('index.html')
 
-@app.route('/post_to_psql_db', methods=['POST', 'GET'])
+@app.route('/post_to_psql_db', methods=['POST'])
 def post_it():
 	con = psycopg2.connect(database="database", user="admin", password="admin1", host="senti1_db", port=5432)
 	cur = con.cursor()
@@ -19,10 +19,9 @@ def post_it():
 	    con.close()
 	    return redirect(url_for('main'))
 
-@app.route('/get_request')
+@app.route('/get_request', methods=['POST'])
 def get_req():
-	if request.method == 'GET':
-		return render_template('index.html')
+	return redirect(url_for('main'))
 
 if __name__ == '__main__':
     app.run()

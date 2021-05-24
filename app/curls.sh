@@ -1,0 +1,1 @@
+echo $(curl -GET 'localhost:5432/database')
