@@ -8,6 +8,10 @@ docker-compose up --build
 ```
 while in your local directory `../senti_one`
 
+
+( In case you don't have `docker compose` plese install it:
+```https://docs.docker.com/compose/install/``` )
+
 ## APP
 
 To use the app, go to:
