@@ -40,3 +40,21 @@ To show data from table type:
 SELECT * FROM PSQLDATA;
 ```
 Try this before and after submiting some data at `localhost:8080` 
+## CURL REQUESTS
+To test curl requesests (`GET|POST`) please enter the senti1_app container by:
+```
+docker exec -it senti1_app bash
+```
+and execute:
+```
+chmod +x curls.sh && ./curls.sh
+```
+The `curls.sh` will send `GET` and `POST` requests. 
+
+Responses and requests syntax should appear bellow the executed command.
+
+`POST` request has default input: `n=test_response`, it will be saved in database (steps to check it above ⬆️)
+
+
+
+If You have any questions or problems with runing this build, please dont hasitate to ask at any moment!
